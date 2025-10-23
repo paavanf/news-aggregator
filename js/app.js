@@ -75,7 +75,7 @@ async function fetchArticles(replace = false) {
     }
 
     const url = `${base}?${params.toString()}`;
-    const res = await fetch(url);
+    const res = await fetch(`/api/news?category=${state.category}&query=${state.query}&page=${state.page}`);
     const json = await res.json();
 
     if (json.status !== "ok") {
