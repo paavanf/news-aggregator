@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NewsHub - News Aggregator</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="header-bg shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between mb-4">
+        <h1 class="text-3xl font-bold text-white">NewsHub</h1>
+        <button id="favoritesToggle" class="custom-btn">Show favorites</button>
+      </div>
+      
+      <div class="flex gap-3 flex-wrap items-center">
+        <input 
+          type="search" 
+          id="searchInput" 
+          placeholder="Search news..." 
+          class="flex-1 min-w-[250px]"
+        />
+        <button id="searchBtn" class="custom-btn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">Categories</h2>
+      <div id="categories" class="flex gap-3 flex-wrap"></div>
+    </section>
+
+    <div id="status" class="mb-6"></div>
+
+    <section id="articlesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"></section>
+
+    <div class="flex justify-center">
+      <button id="loadMoreBtn" class="custom-btn">Load More</button>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-sm">© 2025 NewsHub. Powered by NewsAPI.org</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
